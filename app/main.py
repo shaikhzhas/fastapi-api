@@ -9,11 +9,7 @@ from .routers import post, user, auth, vote
 # models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
-origins = [
-    "http://wwww.google.com",
-    "http://localhost",
-    "http://localhost:8080",
-]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
